@@ -17,6 +17,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.HitResult;
+import org.jetbrains.annotations.NotNull;
 
 public class CardArrow extends AbstractArrow implements IBoundlessArrow
 {
@@ -33,20 +34,21 @@ public class CardArrow extends AbstractArrow implements IBoundlessArrow
     public CardArrow(LivingEntity pShooter, Level pLevel, Item referenceItem) {
         super(ModEntities.CARD_ARROW.get(), pShooter, pLevel);
         this.referenceItem = referenceItem;
+        System.out.println("Test");
     }
 
     @Override
-    protected SoundEvent getDefaultHitGroundSoundEvent() {
+    protected @NotNull SoundEvent getDefaultHitGroundSoundEvent() {
         return ModSounds.CARD_HIT.get();
     }
 
     @Override
-    protected ItemStack getPickupItem() {
+    protected @NotNull ItemStack getPickupItem() {
         return new ItemStack(Items.ARROW);
     }
 
     @Override
-    protected void onHit(HitResult pResult) {
+    protected void onHit(@NotNull HitResult pResult) {
 
         // SUMMON LIGHTNING THOR
         if( !this.level.isClientSide )
@@ -55,8 +57,11 @@ public class CardArrow extends AbstractArrow implements IBoundlessArrow
             {
                 BoundlessLightning lightning = ModEntities.BOUNDLESS_LIGHTNING_GOLD.get().spawn((ServerLevel) this.getLevel(),
                         null, null, player, new BlockPos(pResult.getLocation()), MobSpawnType.TRIGGERED, false, false);
-                lightning.sourceEntity = player;
-                lightning.setDamage(((float) this.lightningDamage));
+                if( lightning != null )
+                {
+                    lightning.sourceEntity = player;
+                    lightning.setDamage(((float) this.lightningDamage));
+                }
             }
         }
 
