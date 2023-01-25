@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "boundlessflux",
+  "key": {
+    "c": {
+      "item": "boundlessflux:loosely_entangled_matter"
+    },
+    "i": {
+      "tag": "forge:ingots/iron"
+    }
+  },
+  "pattern": [
+    " i ",
+    "ici",
+    " i "
+  ],
+  "result": {
+    "item": "boundlessflux:lesser_entangled_matter"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "boundlessflux",
+  "key": {
+    "b": {
+      "item": "minecraft:black_concrete"
+    },
+    "g": {
+      "item": "minecraft:gray_concrete"
+    },
+    "r": {
+      "tag": "forge:storage_blocks/redstone"
+    }
+  },
+  "pattern": [
+    "bgb",
+    "grg",
+    "bgb"
+  ],
+  "result": {
+    "item": "boundlessflux:sword_station"
+  }
+}

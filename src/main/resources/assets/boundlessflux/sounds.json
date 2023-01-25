@@ -1,0 +1,32 @@
+{
+  "shuriken_throw": {
+    "subtitle": "sounds.boundlessflux.shuriken_throw",
+    "sounds": [
+      "boundlessflux:shuriken_throw"
+    ]
+  },
+  "shuriken_hit": {
+    "subtitle": "sounds.boundlessflux.shuriken_hit",
+    "sounds": [
+      "boundlessflux:shuriken_hit"
+    ]
+  },
+  "raygun_fire": {
+    "subtitle": "sounds.boundlessflux.raygun_fire",
+    "sounds": [
+      "boundlessflux:raygun_fire"
+    ]
+  },
+  "card_throw": {
+    "subtitle": "sounds.boundlessflux.card_throw",
+    "sounds": [
+      "boundlessflux:card_throw"
+    ]
+  },
+  "card_hit": {
+    "subtitle": "sounds.boundlessflux.card_hit",
+    "sounds": [
+      "boundlessflux:card_hit"
+    ]
+  }
+}

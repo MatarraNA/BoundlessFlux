@@ -1,0 +1,6 @@
+{
+  "parent": "boundlessflux:item/first_bow_boundless",
+  "textures": {
+    "layer0": "boundlessflux:item/bow/boundless_bow_pull1"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "boundlessflux",
+  "key": {
+    "c": {
+      "item": "boundlessflux:pristine_entangled_matter"
+    },
+    "i": {
+      "item": "minecraft:end_crystal"
+    },
+    "s": {
+      "item": "minecraft:dragon_egg"
+    }
+  },
+  "pattern": [
+    "cic",
+    "isi",
+    "cic"
+  ],
+  "result": {
+    "item": "boundlessflux:awakened_entangled_matter"
+  }
+}

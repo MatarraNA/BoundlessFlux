@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "boundlessflux",
+  "key": {
+    "c": {
+      "item": "boundlessflux:refined_entangled_matter"
+    },
+    "i": {
+      "tag": "forge:nether_stars"
+    }
+  },
+  "pattern": [
+    "cic",
+    "i i",
+    "cic"
+  ],
+  "result": {
+    "item": "boundlessflux:pristine_entangled_matter"
+  }
+}
