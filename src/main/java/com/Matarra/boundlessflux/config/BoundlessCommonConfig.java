@@ -8,6 +8,9 @@ public class BoundlessCommonConfig
     public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
     public static final ForgeConfigSpec SPEC;
 
+    // MISC
+    public static final ForgeConfigSpec.ConfigValue<Boolean> DRAGON_EGG_SPAWN_OVERRIDE;
+
     // SWORD
     public static final ForgeConfigSpec.ConfigValue<Integer> DEFAULT_MAX_ENERGY_SWORD;
     public static final ForgeConfigSpec.ConfigValue<Integer> MAX_ENERGY_CAP_SWORD;
@@ -21,6 +24,11 @@ public class BoundlessCommonConfig
     public static final ForgeConfigSpec.ConfigValue<Double> PERCENT_ENERGY_CONVERTED_TO_DAMAGE_BOW;
     static {
         BUILDER.push("-- Configs for Boundless Flux --");
+
+        BUILDER.comment("-- MISC -- ");
+        DRAGON_EGG_SPAWN_OVERRIDE = BUILDER.comment("Allows the dragon to spawn multiple eggs. Can " +
+                "disable this if enough mod already handles this feature without confliction.")
+                        .define("Dragon_Egg_Override", true);
 
         BUILDER.comment("-- SWORDS --");
         DEFAULT_MAX_ENERGY_SWORD = BUILDER.comment("Default Max Energy the Boundless Sword will have.")

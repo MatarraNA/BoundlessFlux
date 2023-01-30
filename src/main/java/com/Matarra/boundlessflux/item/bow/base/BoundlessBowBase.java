@@ -239,7 +239,7 @@ public class BoundlessBowBase extends BowItem
     @Override
     public int getBarWidth(ItemStack stack) {
         return stack.getCapability(ForgeCapabilities.ENERGY, null)
-                .map(e -> Math.min(13 * e.getEnergyStored() / e.getMaxEnergyStored(), 13))
+                .map(e -> Math.min((int)(13 * (e.getEnergyStored() * 0.01d) / (e.getMaxEnergyStored() * 0.01d)), 13))
                 .orElse(0);
     }
 

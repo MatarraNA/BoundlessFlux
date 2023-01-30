@@ -37,7 +37,7 @@ public class RaygunArrow extends AbstractArrow implements IBoundlessArrow
 
     @Override
     protected SoundEvent getDefaultHitGroundSoundEvent() {
-        return null;
+        return ModSounds.RAYGUN_HIT.get();
     }
 
     @Override

@@ -34,7 +34,6 @@ public class CardArrow extends AbstractArrow implements IBoundlessArrow
     public CardArrow(LivingEntity pShooter, Level pLevel, Item referenceItem) {
         super(ModEntities.CARD_ARROW.get(), pShooter, pLevel);
         this.referenceItem = referenceItem;
-        System.out.println("Test");
     }
 
     @Override

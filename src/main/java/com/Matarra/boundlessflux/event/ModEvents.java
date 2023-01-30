@@ -3,17 +3,32 @@ package com.Matarra.boundlessflux.event;
 import com.Matarra.boundlessflux.BoundlessFlux;
 import com.Matarra.boundlessflux.config.BoundlessCommonConfig;
 import com.Matarra.boundlessflux.tags.ModTags;
+import net.minecraft.client.Minecraft;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.dimension.end.EndDragonFight;
+import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.levelgen.feature.EndPodiumFeature;
 import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.energy.IEnergyStorage;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
+import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
+import org.checkerframework.checker.units.qual.C;
+
+import java.util.Collection;
 
 public class ModEvents
 {
@@ -82,6 +97,26 @@ public class ModEvents
                     else
                         pStack.getOrCreateTag().putInt("max_energy", current_max + energy_consumed);
 
+                }
+            }
+        }
+
+        @SubscribeEvent
+        public static void onLivingDrops(LivingDropsEvent event)
+        {
+            if( event == null ) return;
+            if( event.isCanceled() ) return;
+            if( event.getEntity() == null ) return;
+            if( event.getEntity().level.isClientSide() ) return;
+            if( event.getEntity() instanceof EnderDragon dragon )
+            {
+                // handle egg drop
+                EndDragonFight fight = dragon.getDragonFight();
+                if( BoundlessCommonConfig.DRAGON_EGG_SPAWN_OVERRIDE.get() && fight != null && fight.hasPreviouslyKilledDragon() )
+                {
+                    // spawn the egg
+                    Level level = event.getEntity().getLevel();
+                    level.setBlockAndUpdate(level.getHeightmapPos(Heightmap.Types.MOTION_BLOCKING, EndPodiumFeature.END_PODIUM_LOCATION), Blocks.DRAGON_EGG.defaultBlockState());
                 }
             }
         }

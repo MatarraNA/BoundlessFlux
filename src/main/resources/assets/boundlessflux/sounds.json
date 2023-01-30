@@ -17,6 +17,10 @@
       "boundlessflux:raygun_fire"
     ]
   },
+  "raygun_hit": {
+    "subtitle": "sounds.boundlessflux.raygun_fire",
+    "sounds": []
+  },
   "card_throw": {
     "subtitle": "sounds.boundlessflux.card_throw",
     "sounds": [

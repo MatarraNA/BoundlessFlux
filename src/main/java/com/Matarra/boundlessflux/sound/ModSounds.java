@@ -20,6 +20,7 @@ public class ModSounds
     public static final RegistryObject<SoundEvent> SHURIKEN_THROW = registerSoundEvent("shuriken_throw");
     public static final RegistryObject<SoundEvent> SHURIKEN_HIT = registerSoundEvent("shuriken_hit");
     public static final RegistryObject<SoundEvent> RAYGUN_FIRE = registerSoundEvent("raygun_fire");
+    public static final RegistryObject<SoundEvent> RAYGUN_HIT = registerSoundEvent("raygun_hit");
 
     public static RegistryObject<SoundEvent> registerSoundEvent(String name)
     {
