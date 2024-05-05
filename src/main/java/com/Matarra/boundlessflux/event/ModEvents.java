@@ -2,15 +2,20 @@ package com.Matarra.boundlessflux.event;
 
 import com.Matarra.boundlessflux.BoundlessFlux;
 import com.Matarra.boundlessflux.config.BoundlessCommonConfig;
+import com.Matarra.boundlessflux.enchant.ModEnchantments;
 import com.Matarra.boundlessflux.tags.ModTags;
 import net.minecraft.client.Minecraft;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.FireworkRocketEntity;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.dimension.end.EndDragonFight;
@@ -65,6 +70,11 @@ public class ModEvents
                     int current_max = cap.getMaxEnergyStored();
                     int current_energy = cap.getEnergyStored();
                     int energy_consumed = (int)(current_energy * BoundlessCommonConfig.PERCENT_ENERGY_CONSUMED_ONHIT_SWORD.get());
+
+                    // does this weapon have 50% more energy gain enchant?
+                    if( pStack.getEnchantmentLevel(ModEnchantments.ENERGY_GAIN.get()) > 0 )
+                        energy_consumed = (int)(energy_consumed * 1.5D);
+
                     if( (long)current_max + (long)energy_consumed > BoundlessCommonConfig.MAX_ENERGY_CAP_SWORD.get() )
                         pStack.getOrCreateTag().putInt("max_energy", BoundlessCommonConfig.MAX_ENERGY_CAP_SWORD.get());
                     else
@@ -92,6 +102,11 @@ public class ModEvents
                     int current_max = cap.getMaxEnergyStored();
                     int current_energy = cap.getEnergyStored();
                     int energy_consumed = (int)(current_energy * BoundlessCommonConfig.PERCENT_ENERGY_CONSUMED_ONFIRE_BOW.get());
+
+                    // does this weapon have 50% more energy gain enchant?
+                    if( pStack.getEnchantmentLevel(ModEnchantments.ENERGY_GAIN.get()) > 0 )
+                        energy_consumed = (int)(energy_consumed * 1.5D);
+
                     if( (long)current_max + (long)energy_consumed > BoundlessCommonConfig.MAX_ENERGY_CAP_BOW.get() )
                         pStack.getOrCreateTag().putInt("max_energy", BoundlessCommonConfig.MAX_ENERGY_CAP_BOW.get());
                     else

@@ -48,6 +48,28 @@ public class JEIIntegrationPlugin implements IModPlugin
                             "the boundless tier."));
         });
 
+        // add the description to all of our boundless pickaxes
+        ForgeRegistries.ITEMS.tags().getTag(ModTags.BOUNDLESS_PICKAXE_POST).stream().forEach(x->
+        {
+            registration.addIngredientInfo(new ItemStack(x), VanillaTypes.ITEM_STACK,
+                    Component.literal("To upgrade your Bounded Pickaxe to a boundless variant, " +
+                            "you must take your Bounded Pickaxe along with a fully charged Energy Crystal " +
+                            "in your offhand. Then at exactly midnight, you must right click while " +
+                            "looking directly at the moon. Energy will strike you elevating your tool to " +
+                            "the boundless tier."));
+        });
+
+        // add the description to all of our boundless SHOVELS
+        ForgeRegistries.ITEMS.tags().getTag(ModTags.BOUNDLESS_SHOVEL_POST).stream().forEach(x->
+        {
+            registration.addIngredientInfo(new ItemStack(x), VanillaTypes.ITEM_STACK,
+                    Component.literal("To upgrade your Bounded Shovel to a boundless variant, " +
+                            "you must take your Bounded Shovel along with a fully charged Energy Crystal " +
+                            "in your offhand. Then at exactly midnight, you must right click while " +
+                            "looking directly at the moon. Energy will strike you elevating your tool to " +
+                            "the boundless tier."));
+        });
+
         // add the description to all of our upgrades
         ForgeRegistries.ITEMS.tags().getTag(ModTags.BOUNDLESS_UPGRADE_SWORD).stream().forEach(x->
         {

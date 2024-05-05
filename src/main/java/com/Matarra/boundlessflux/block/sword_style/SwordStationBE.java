@@ -70,7 +70,10 @@ public class SwordStationBE extends BlockEntity {
                 // only allow weapons in slot one
                 if (slot == 0)
                     return stack.getTags()
-                            .filter(x -> x.equals(ModTags.BOUNDLESS_SWORD_POST) || x.equals(ModTags.BOUNDLESS_BOW_POST)).count() > 0;
+                            .filter(x -> x.equals(ModTags.BOUNDLESS_SWORD_POST) ||
+                                    x.equals(ModTags.BOUNDLESS_BOW_POST) ||
+                                    x.equals(ModTags.BOUNDLESS_SHOVEL_POST) ||
+                                    x.equals(ModTags.BOUNDLESS_PICKAXE_POST)).count() > 0;
                 else if (slot > 0 && slot < 4) {
                     // is an item in the first slot?
                     ItemStack weaponItem = getStackInSlot(0);
@@ -87,6 +90,22 @@ public class SwordStationBE extends BlockEntity {
                     else if (weaponItem.getTags().filter(x -> x.equals(ModTags.BOUNDLESS_BOW_POST)).count() > 0) {
                         // only allow BOW UPGRADES here
                         if (stack.getTags().filter(x -> x.equals(ModTags.BOUNDLESS_UPGRADE_BOW)).count() > 0)
+                            return true;
+                    }
+
+                    // IS IT A PICKAXE?
+                    else if (weaponItem.getTags().filter(x -> x.equals(ModTags.BOUNDLESS_PICKAXE_POST)).count() > 0) {
+
+                        // only allow PICKAXE UPGRADES or BLOCK BREAK upgrades here
+                        if (stack.getTags().filter(x -> x.equals(ModTags.BOUNDLESS_UPGRADE_BLOCKBREAK_TOOL)).count() > 0)
+                            return true;
+                    }
+
+                    // IS IT A SHOVEL?
+                    else if (weaponItem.getTags().filter(x -> x.equals(ModTags.BOUNDLESS_SHOVEL_POST)).count() > 0) {
+
+                        // only allow SHOVEL UPGRADES or BLOCK BREAK upgrades here
+                        if (stack.getTags().filter(x -> x.equals(ModTags.BOUNDLESS_UPGRADE_BLOCKBREAK_TOOL)).count() > 0)
                             return true;
                     }
                 }

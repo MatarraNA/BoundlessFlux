@@ -63,6 +63,46 @@ public class TutItemModels extends ItemModelProvider {
         singleTexture(ModItems.UPGRADE_INFINITY.getId().getPath(),
                 mcLoc("item/generated"),
                 "layer0", modLoc("item/upgrades/upgrade_infinity"));
+        singleTexture(ModItems.UPGRADE_ENERGY_GAIN.getId().getPath(),
+                mcLoc("item/generated"),
+                "layer0", modLoc("item/upgrades/upgrade_energy_gain"));
+        singleTexture(ModItems.UPGRADE_FORTUNE.getId().getPath(),
+                mcLoc("item/generated"),
+                "layer0", modLoc("item/upgrades/upgrade_fortune"));
+        singleTexture(ModItems.UPGRADE_HAMMER.getId().getPath(),
+                mcLoc("item/generated"),
+                "layer0", modLoc("item/upgrades/upgrade_3x3"));
+        singleTexture(ModItems.UPGRADE_SILK.getId().getPath(),
+                mcLoc("item/generated"),
+                "layer0", modLoc("item/upgrades/upgrade_silk"));
+
+        // PICKAXES
+        singleTexture(ModItems.BOUNDED_PICKAXE.getId().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/pickaxe/boundless_pickaxe"));
+        singleTexture(ModItems.BOUNDLESS_PICKAXE.getId().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/pickaxe/boundless_pickaxe"));
+        singleTexture(ModItems.JELLYFISH_PICKAXE.getId().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/pickaxe/jellyfish_net"));
+        singleTexture(ModItems.CANDYCANE_PICKAXE.getId().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/pickaxe/candy_cane_pickaxe"));
+        singleTexture(ModItems.DRILL_PICKAXE.getId().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/pickaxe/drill"));
+        singleTexture(ModItems.SCYTHE_PICKAXE.getId().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/pickaxe/scythe"));
+
+        // SHOVELS
+        singleTexture(ModItems.BOUNDED_SHOVEL.getId().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/shovel/boundless_shovel"));
+        singleTexture(ModItems.BOUNDLESS_SHOVEL.getId().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/shovel/boundless_shovel"));
 
         // weapons
         singleTexture(ModItems.FIRST_SWORD.getId().getPath(),

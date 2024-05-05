@@ -7,6 +7,8 @@ import com.Matarra.boundlessflux.item.arrow.*;
 import com.Matarra.boundlessflux.item.bow.*;
 import com.Matarra.boundlessflux.item.bow.base.BoundedBowBase;
 import com.Matarra.boundlessflux.item.misc.BoundlessGem;
+import com.Matarra.boundlessflux.item.pickaxe.*;
+import com.Matarra.boundlessflux.item.shovel.*;
 import com.Matarra.boundlessflux.item.swords.*;
 import com.Matarra.boundlessflux.item.upgrades.*;
 import com.Matarra.boundlessflux.setup.ModSetup;
@@ -74,6 +76,28 @@ public class ModItems
                 }
             });
 
+    // BOUNDED TOOLS
+    public static final RegistryObject<BoundedPickaxe> BOUNDED_PICKAXE = ITEMS.register("bounded_pickaxe",
+            () -> new BoundedPickaxe(CustomTiers.BOUNDED_TIER, 4, -2f, ITEM_PROPERTIES));
+    public static final RegistryObject<BoundedShovel> BOUNDED_SHOVEL = ITEMS.register("bounded_shovel",
+            () -> new BoundedShovel(CustomTiers.BOUNDED_TIER, 4, -2f, ITEM_PROPERTIES));
+
+    // BOUNDLESS PICKAXES
+    public static final RegistryObject<BoundlessPickaxe> BOUNDLESS_PICKAXE = ITEMS.register("boundless_pickaxe",
+            () -> new BoundlessPickaxe(CustomTiers.BOUNDLESS_TIER, 4, -2f, ITEM_PROPERTIES));
+    public static final RegistryObject<JellyfishPickaxe> JELLYFISH_PICKAXE = ITEMS.register("jellyfish_pickaxe",
+            () -> new JellyfishPickaxe(CustomTiers.BOUNDLESS_TIER, 4, -2f, ITEM_PROPERTIES));
+    public static final RegistryObject<CandyCanePickaxe> CANDYCANE_PICKAXE = ITEMS.register("candycane_pickaxe",
+            () -> new CandyCanePickaxe(CustomTiers.BOUNDLESS_TIER, 4, -2f, ITEM_PROPERTIES));
+    public static final RegistryObject<DrillPickaxe> DRILL_PICKAXE = ITEMS.register("drill_pickaxe",
+            () -> new DrillPickaxe(CustomTiers.BOUNDLESS_TIER, 4, -2f, ITEM_PROPERTIES));
+    public static final RegistryObject<ScythePickaxe> SCYTHE_PICKAXE = ITEMS.register("scythe_pickaxe",
+            () -> new ScythePickaxe(CustomTiers.BOUNDLESS_TIER, 4, -2f, ITEM_PROPERTIES));
+
+    // SHOVELS
+    public static final RegistryObject<BoundlessShovel> BOUNDLESS_SHOVEL = ITEMS.register("boundless_shovel",
+            () -> new BoundlessShovel(CustomTiers.BOUNDLESS_TIER, 4, -2f, ITEM_PROPERTIES));
+
     // ARROWS
     public static final RegistryObject<FirstArrowItem> FIRST_ARROW = ITEMS.register("first_arrow",
             () -> new FirstArrowItem(ITEM_PROPERTIES_NOTAB));
@@ -117,6 +141,14 @@ public class ModItems
             new ItemInfinityUpgrade(ITEM_PROPERTIES_NOSTACK));
     public static final RegistryObject<ItemFlameUpgrade> UPGRADE_FLAME = ITEMS.register("upgrade_flame", () ->
             new ItemFlameUpgrade(ITEM_PROPERTIES_NOSTACK));
+    public static final RegistryObject<ItemSilkUpgrade> UPGRADE_SILK = ITEMS.register("upgrade_silk", () ->
+            new ItemSilkUpgrade(ITEM_PROPERTIES_NOSTACK));
+    public static final RegistryObject<ItemFortuneUpgrade> UPGRADE_FORTUNE = ITEMS.register("upgrade_fortune", () ->
+            new ItemFortuneUpgrade(ITEM_PROPERTIES_NOSTACK));
+    public static final RegistryObject<ItemHammerUpgrade> UPGRADE_HAMMER = ITEMS.register("upgrade_hammer", () ->
+            new ItemHammerUpgrade(ITEM_PROPERTIES_NOSTACK));
+    public static final RegistryObject<ItemEnergyGainUpgrade> UPGRADE_ENERGY_GAIN = ITEMS.register("upgrade_energy_gain", () ->
+            new ItemEnergyGainUpgrade(ITEM_PROPERTIES_NOSTACK));
 
     // BOUNDED SWORDS
     public static final RegistryObject<FirstBounded> FIRST_SWORD = ITEMS.register("first_sword", () ->
@@ -147,9 +179,9 @@ public class ModItems
     public static class CustomTiers
     {
         public static final Tier BOUNDED_TIER = new ForgeTier(
-                2,
+                4,
                 9,
-                0f,
+                8f,
                 0f,
                 0,
                 null,
@@ -157,9 +189,9 @@ public class ModItems
         );
 
         public static final ForgeTier BOUNDLESS_TIER = new ForgeTier(
-                2,
+                4,
                 9,
-                0f,
+                10f,
                 0f,
                 0,
                 null,

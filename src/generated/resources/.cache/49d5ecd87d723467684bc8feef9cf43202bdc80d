@@ -1,9 +1,2 @@
-// 1.19.2	2023-01-25T23:32:40.9126771	Tutorial Tags
-fcfa00acc3c7d2a3eb48c8bc445a88c62f301a37 data/boundlessflux/tags/items/bounded_bow_pre.json
-71aaf61e740fa36d05991c417787fcc9801c2111 data/boundlessflux/tags/items/bounded_sword_pre.json
-9494b4a7e2b0c7899be81bd2b844eb9ada5021ef data/boundlessflux/tags/items/boundless_bow_post.json
-d0ef0ff14fbfb73614bfa95bbb349eccccdac865 data/boundlessflux/tags/items/boundless_sword_post.json
-e2e09101b992b107047588efebdf1c1e71de03b5 data/boundlessflux/tags/items/boundless_upgrade.json
-92e926f98caef395cdb726011891d25c9d59202c data/boundlessflux/tags/items/boundless_upgrade_bow.json
-31acd3d5033693b12edf64cce626457b0da756c4 data/forge/tags/items/tools/bows.json
-1f0c8913aa75e72d36648bf61f7b21264e40e5c4 data/forge/tags/items/tools/swords.json
+// 1.19.2	2024-05-05T19:07:49.3349072	Tutorial Tags
+ee77c94c8018814376d1392df7dec1227d2e9177 data/minecraft/tags/blocks/mineable/pickaxe.json

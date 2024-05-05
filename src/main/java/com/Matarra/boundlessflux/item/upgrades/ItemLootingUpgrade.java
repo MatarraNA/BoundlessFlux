@@ -36,6 +36,10 @@ public class ItemLootingUpgrade extends BaseItemUpgrade
 
         // set energy text
         tooltip.add(Component.literal("Looting VI"));
+
+        // APPEND COMPATIBILITIES
+        tooltip.add(Component.literal(""));
+        tooltip.add(Component.literal("Compatible with any Boundless Sword").withStyle(ChatFormatting.ITALIC));
     }
 
 }

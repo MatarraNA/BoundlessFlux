@@ -111,10 +111,8 @@ public class BoundlessSwordBase extends SwordItem
     @Override
     public boolean hurtEnemy(ItemStack pStack, LivingEntity pTarget, @NotNull LivingEntity pAttacker) {
         // consume a percentage of remaining power
-        int energyConsumed = pStack.getCapability(ForgeCapabilities.ENERGY, null)
-                .map(e -> e.receiveEnergy((int)(e.getEnergyStored() * BoundlessCommonConfig.PERCENT_ENERGY_CONSUMED_ONHIT_SWORD.get()) * -1, false))
-                .orElse(0);
-        energyConsumed *= -1; // convert it back to a positive number
+        pStack.getCapability(ForgeCapabilities.ENERGY, null)
+                .map(e -> e.receiveEnergy((int)(e.getEnergyStored() * BoundlessCommonConfig.PERCENT_ENERGY_CONSUMED_ONHIT_SWORD.get()) * -1, false));
 
         // handle super for enemy
         return super.hurtEnemy(pStack, pTarget, pAttacker);

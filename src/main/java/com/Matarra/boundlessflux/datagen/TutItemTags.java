@@ -58,15 +58,51 @@ public class TutItemTags extends ItemTagsProvider {
                 .add(ModItems.TITAN_BOUNDLESS.get())
                 .add(ModItems.KEYBLADE_BOUNDLESS.get());
 
+        tag(Tags.Items.TOOLS_PICKAXES)
+                .add(ModItems.BOUNDED_PICKAXE.get())
+                .add(ModItems.BOUNDLESS_PICKAXE.get())
+                .add(ModItems.CANDYCANE_PICKAXE.get())
+                .add(ModItems.DRILL_PICKAXE.get())
+                .add(ModItems.SCYTHE_PICKAXE.get())
+                .add(ModItems.JELLYFISH_PICKAXE.get());
+
+        tag(ModTags.BOUNDED_PICKAXE_PRE)
+                .add(ModItems.BOUNDED_PICKAXE.get());
+
+        tag(ModTags.BOUNDLESS_PICKAXE_POST)
+                .add(ModItems.BOUNDLESS_PICKAXE.get())
+                .add(ModItems.CANDYCANE_PICKAXE.get())
+                .add(ModItems.DRILL_PICKAXE.get())
+                .add(ModItems.SCYTHE_PICKAXE.get())
+                .add(ModItems.JELLYFISH_PICKAXE.get());
+
+        tag(Tags.Items.TOOLS_SHOVELS)
+                .add(ModItems.BOUNDED_SHOVEL.get())
+                .add(ModItems.BOUNDLESS_SHOVEL.get());
+
+        tag(ModTags.BOUNDED_SHOVEL_PRE)
+                .add(ModItems.BOUNDED_SHOVEL.get());
+
+        tag(ModTags.BOUNDLESS_SHOVEL_POST)
+                .add(ModItems.BOUNDLESS_SHOVEL.get());
+
         tag(ModTags.BOUNDLESS_UPGRADE_SWORD)
                 .add(ModItems.UPGRADE_SWEEPING.get())
                 .add(ModItems.UPGRADE_FIRE.get())
+                .add(ModItems.UPGRADE_ENERGY_GAIN.get())
                 .add(ModItems.UPGRADE_LOOTING.get());
 
         tag(ModTags.BOUNDLESS_UPGRADE_BOW)
                 .add(ModItems.UPGRADE_FLAME.get())
                 .add(ModItems.UPGRADE_INFINITY.get())
+                .add(ModItems.UPGRADE_ENERGY_GAIN.get())
                 .add(ModItems.UPGRADE_STORM_CALL.get());
+
+        tag(ModTags.BOUNDLESS_UPGRADE_BLOCKBREAK_TOOL)
+                .add(ModItems.UPGRADE_FORTUNE.get())
+                .add(ModItems.UPGRADE_HAMMER.get())
+                .add(ModItems.UPGRADE_ENERGY_GAIN.get())
+                .add(ModItems.UPGRADE_SILK.get());
     }
 
     @Override

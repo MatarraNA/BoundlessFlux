@@ -80,6 +80,28 @@ public class TutRecipes extends RecipeProvider {
                 .unlockedBy("coal", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COAL))
                 .save(consumer);
 
+        // PICKAXE
+        ShapedRecipeBuilder.shaped(ModItems.BOUNDED_PICKAXE.get())
+                .pattern("www")
+                .pattern(" s ")
+                .pattern(" s ")
+                .define('s', Items.STICK)
+                .define('w', ModItems.AWAKENED_ENTANGLED_ITEM.get())
+                .group(BoundlessFlux.MODID)
+                .unlockedBy("coal", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COAL))
+                .save(consumer);
+
+        // SHOVEL
+        ShapedRecipeBuilder.shaped(ModItems.BOUNDED_SHOVEL.get())
+                .pattern(" w ")
+                .pattern(" s ")
+                .pattern(" s ")
+                .define('s', Items.STICK)
+                .define('w', ModItems.AWAKENED_ENTANGLED_ITEM.get())
+                .group(BoundlessFlux.MODID)
+                .unlockedBy("coal", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COAL))
+                .save(consumer);
+
         // sword
         ShapedRecipeBuilder.shaped(ModItems.FIRST_SWORD.get())
                 .pattern(" w ")

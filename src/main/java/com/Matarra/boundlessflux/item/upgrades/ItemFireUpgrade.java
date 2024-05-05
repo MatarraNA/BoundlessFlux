@@ -1,5 +1,7 @@
 package com.Matarra.boundlessflux.item.upgrades;
 
+import com.Matarra.boundlessflux.tags.ModTags;
+import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
@@ -31,6 +33,10 @@ public class ItemFireUpgrade extends BaseItemUpgrade
 
         // set energy text
         tooltip.add(Component.literal("Fire Aspect IV"));
+
+        // APPEND COMPATIBILITIES
+        tooltip.add(Component.literal(""));
+        tooltip.add(Component.literal("Compatible with any Boundless Sword").withStyle(ChatFormatting.ITALIC));
     }
 
 }

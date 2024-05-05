@@ -57,7 +57,7 @@ public class SwordStationBlock extends Block implements EntityBlock {
     public void appendHoverText(ItemStack stack, @Nullable BlockGetter reader, List<Component> list, TooltipFlag flags) {
 
         // create our block tooltip
-        list.add(Component.literal("Used to style your Boundless Weapon!"));
+        list.add(Component.literal("Used to style your Boundless Tool!"));
         list.add(Component.literal(""));
         list.add(Component.literal("...or weeb for short").withStyle(ChatFormatting.ITALIC, ChatFormatting.GOLD));
     }

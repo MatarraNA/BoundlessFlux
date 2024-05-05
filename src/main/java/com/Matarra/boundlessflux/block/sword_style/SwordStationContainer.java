@@ -120,8 +120,11 @@ public class SwordStationContainer extends AbstractContainerMenu
                             slots.get(i).setChanged();
                         }
                     }
+
                     // if placing a sword IN slot 0, deserialize it
-                    else if(pMouseX == 0 && slots.get(pMouseX).hasItem() && slots.get(pMouseX).getItem().getTags().filter(x->x.equals(ModTags.BOUNDLESS_SWORD_POST) ||
+                    if(pMouseX == 0 && slots.get(pMouseX).hasItem() && slots.get(pMouseX).getItem().getTags().filter(x->
+                            x.equals(ModTags.BOUNDLESS_SWORD_POST) ||
+                            x.equals(ModTags.BOUNDLESS_PICKAXE_POST) ||
                             x.equals(ModTags.BOUNDLESS_BOW_POST)).count() > 0)
                     {
                         deserializeWeaponUpgrades();
@@ -187,29 +190,50 @@ public class SwordStationContainer extends AbstractContainerMenu
         for( int i = 0; i < 4; i++ )
         {
             if( i == 0 ) continue;
-            if( i > 4 ) break; // the last index of which an upgrade is insertable
 
             // Enchant the weapon with... enchantments!
-            if( slots.get(i).getItem().getItem().equals(ModItems.UPGRADE_LOOTING.get()))
+            Item item = slots.get(i).getItem().getItem();
+            if( item.equals(ModItems.UPGRADE_LOOTING.get()))
                 weaponItem.enchant(Enchantments.MOB_LOOTING, 6);
-            else if( slots.get(i).getItem().getItem().equals(ModItems.UPGRADE_SWEEPING.get()))
+            else if( item.equals(ModItems.UPGRADE_SWEEPING.get()))
                 weaponItem.enchant(Enchantments.SWEEPING_EDGE, 6);
-            else if( slots.get(i).getItem().getItem().equals(ModItems.UPGRADE_FIRE.get()))
+            else if( item.equals(ModItems.UPGRADE_FIRE.get()))
                 weaponItem.enchant(Enchantments.FIRE_ASPECT, 4);
 
             // BOW ENCHANTS
-            else if( slots.get(i).getItem().getItem().equals(ModItems.UPGRADE_STORM_CALL.get()))
+            else if( item.equals(ModItems.UPGRADE_STORM_CALL.get()))
                 weaponItem.enchant(ModEnchantments.STORM_CALL.get(), 1);
-            else if( slots.get(i).getItem().getItem().equals(ModItems.UPGRADE_FLAME.get()))
+            else if( item.equals(ModItems.UPGRADE_FLAME.get()))
                 weaponItem.enchant(Enchantments.FLAMING_ARROWS, 1);
-            else if( slots.get(i).getItem().getItem().equals(ModItems.UPGRADE_INFINITY.get()))
+            else if( item.equals(ModItems.UPGRADE_INFINITY.get()))
                 weaponItem.enchant(Enchantments.INFINITY_ARROWS, 1);
+
+            // GENERIC ENCHANTS
+            else if( item.equals(ModItems.UPGRADE_ENERGY_GAIN.get()))
+                weaponItem.enchant(ModEnchantments.ENERGY_GAIN.get(), 1);
+
+            // BLOCKBREAK ENCHANTS
+            else if( item.equals(ModItems.UPGRADE_SILK.get()))
+                weaponItem.enchant(Enchantments.SILK_TOUCH, 1);
+            else if( item.equals(ModItems.UPGRADE_FORTUNE.get()))
+                weaponItem.enchant(Enchantments.BLOCK_FORTUNE, 6);
+            else if( item.equals(ModItems.UPGRADE_HAMMER.get()))
+                weaponItem.enchant(ModEnchantments.HAMMER.get(), 1);
         }
     }
 
     // populate the UPGRADE slots with the stored inventory on the weapon
     private void deserializeWeaponUpgrades()
     {
+        // first clear the slots to ensure they never dupe
+        for( int i = 0; i < 4; i++ )
+        {
+            if( i == 0 ) continue;
+
+            // set the slots
+            slots.get(i).set(ItemStack.EMPTY);
+        }
+
         // deserialize the NBT tags on the sword and create the items for them
         ItemStack weaponItem = slots.get(0).getItem();
         if(weaponItem.isEmpty()) return;
@@ -226,7 +250,6 @@ public class SwordStationContainer extends AbstractContainerMenu
         for( int i = 0; i < 4; i++ )
         {
             if( i == 0 ) continue;
-            if( i >= 4 ) continue;
 
             // set the slots
             slots.get(i).set(weaponHandler.getStackInSlot(i));
@@ -253,6 +276,7 @@ public class SwordStationContainer extends AbstractContainerMenu
             // check if the item exists still in the slot
             if( item.getTags().filter(x->
                     x.equals(ModTags.BOUNDLESS_SWORD_POST) ||
+                    x.equals(ModTags.BOUNDLESS_PICKAXE_POST) ||
                     x.equals(ModTags.BOUNDLESS_BOW_POST)).count() < 1 ) return;
 
             // set the bool tag
@@ -268,6 +292,8 @@ public class SwordStationContainer extends AbstractContainerMenu
             list = ForgeRegistries.ITEMS.tags().getTag(ModTags.BOUNDLESS_SWORD_POST).stream().toList();
         if( item.getTags().filter(x->x.equals(ModTags.BOUNDLESS_BOW_POST)).count() > 0 )
             list = ForgeRegistries.ITEMS.tags().getTag(ModTags.BOUNDLESS_BOW_POST).stream().toList();
+        if( item.getTags().filter(x->x.equals(ModTags.BOUNDLESS_PICKAXE_POST)).count() > 0 )
+            list = ForgeRegistries.ITEMS.tags().getTag(ModTags.BOUNDLESS_PICKAXE_POST).stream().toList();
 
         if( list == null ) return;
 

@@ -1,5 +1,6 @@
 package com.Matarra.boundlessflux.item.upgrades;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
@@ -31,6 +32,10 @@ public class ItemSweepingUpgrade extends BaseItemUpgrade
 
         // set energy text
         tooltip.add(Component.literal("Sweeping Edge VI"));
+
+        // APPEND COMPATIBILITIES
+        tooltip.add(Component.literal(""));
+        tooltip.add(Component.literal("Compatible with any Boundless Sword").withStyle(ChatFormatting.ITALIC));
     }
 
 }
