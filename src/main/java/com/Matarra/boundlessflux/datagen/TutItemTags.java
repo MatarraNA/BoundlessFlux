@@ -78,13 +78,29 @@ public class TutItemTags extends ItemTagsProvider {
 
         tag(Tags.Items.TOOLS_SHOVELS)
                 .add(ModItems.BOUNDED_SHOVEL.get())
+                .add(ModItems.SPATULA_SHOVEL.get())
+                .add(ModItems.MAGNIFYING_SHOVEL.get())
+                .add(ModItems.ICECREAM_SHOVEL.get())
                 .add(ModItems.BOUNDLESS_SHOVEL.get());
 
         tag(ModTags.BOUNDED_SHOVEL_PRE)
                 .add(ModItems.BOUNDED_SHOVEL.get());
 
         tag(ModTags.BOUNDLESS_SHOVEL_POST)
+                .add(ModItems.SPATULA_SHOVEL.get())
+                .add(ModItems.MAGNIFYING_SHOVEL.get())
+                .add(ModItems.ICECREAM_SHOVEL.get())
                 .add(ModItems.BOUNDLESS_SHOVEL.get());
+
+        tag(Tags.Items.TOOLS_AXES)
+                .add(ModItems.BOUNDLESS_AXE.get())
+                .add(ModItems.BOUNDED_AXE.get());
+
+        tag(ModTags.BOUNDED_AXE_PRE)
+                .add(ModItems.BOUNDED_AXE.get());
+
+        tag(ModTags.BOUNDLESS_AXE_POST)
+                .add(ModItems.BOUNDLESS_AXE.get());
 
         tag(ModTags.BOUNDLESS_UPGRADE_SWORD)
                 .add(ModItems.UPGRADE_SWEEPING.get())
@@ -97,6 +113,12 @@ public class TutItemTags extends ItemTagsProvider {
                 .add(ModItems.UPGRADE_INFINITY.get())
                 .add(ModItems.UPGRADE_ENERGY_GAIN.get())
                 .add(ModItems.UPGRADE_STORM_CALL.get());
+
+        tag(ModTags.BOUNDLESS_UPGRADE_PICKAXE)
+                .add(ModItems.UPGRADE_VEIN_MINER_ORE.get());
+
+        tag(ModTags.BOUNDLESS_UPGRADE_AXE)
+                .add(ModItems.UPGRADE_FALLER.get());
 
         tag(ModTags.BOUNDLESS_UPGRADE_BLOCKBREAK_TOOL)
                 .add(ModItems.UPGRADE_FORTUNE.get())

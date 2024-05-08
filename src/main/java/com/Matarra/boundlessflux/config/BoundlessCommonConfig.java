@@ -10,6 +10,7 @@ public class BoundlessCommonConfig
 
     // MISC
     public static final ForgeConfigSpec.ConfigValue<Boolean> DRAGON_EGG_SPAWN_OVERRIDE;
+    public static final ForgeConfigSpec.ConfigValue<Integer> VEIN_MINE_BLOCK_LIMIT;
 
     // TOOLS - NON WEAPON
     public static final ForgeConfigSpec.ConfigValue<Integer> DEFAULT_MAX_ENERGY_TOOL;
@@ -35,6 +36,8 @@ public class BoundlessCommonConfig
         DRAGON_EGG_SPAWN_OVERRIDE = BUILDER.comment("Allows the dragon to spawn multiple eggs. Can " +
                 "disable this if enough mod already handles this feature without confliction.")
                         .define("Dragon_Egg_Override", true);
+        VEIN_MINE_BLOCK_LIMIT = BUILDER.comment("Max. blocks vein miner and tree faller are allowed to mine in one instance.")
+                .define("Vein_Miner_Faller_Block_Limit", 52);
 
         BUILDER.comment("-- NON WEAPON TOOLS --");
         DEFAULT_MAX_ENERGY_TOOL = BUILDER.comment("Default Max Energy the Boundless Tools will have.")

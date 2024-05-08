@@ -44,9 +44,13 @@ public class TutLanguageProvider extends LanguageProvider {
         add(ModEnchantments.STORM_CALL.get(), "Storm Call");
         add(ModEnchantments.HAMMER.get(), "Hammer 3x3");
         add(ModEnchantments.ENERGY_GAIN.get(), "Energy Gain");
+        add(ModEnchantments.FALLER.get(), "Tree Faller");
+        add(ModEnchantments.ORE_VEIN_MINER.get(), "Ore-Miner");
         add(ModItems.UPGRADE_STORM_CALL.get(), "Storm Call Enhancement");
         add(ModItems.UPGRADE_FLAME.get(), "Flame Enhancement");
         add(ModItems.UPGRADE_INFINITY.get(), "Infinity Enhancement");
+        add(ModItems.UPGRADE_FALLER.get(), "Tree Faller Enhancement");
+        add(ModItems.UPGRADE_VEIN_MINER_ORE.get(), "VeinMiner Enhancement");
 
         // PICKS
         add(ModItems.BOUNDED_PICKAXE.get(), "Bounded Pickaxe");
@@ -59,6 +63,13 @@ public class TutLanguageProvider extends LanguageProvider {
         // SHOVEL
         add(ModItems.BOUNDED_SHOVEL.get(), "Bounded Shovel");
         add(ModItems.BOUNDLESS_SHOVEL.get(), "Boundless Shovel");
+        add(ModItems.SPATULA_SHOVEL.get(), "Golden Spatula");
+        add(ModItems.MAGNIFYING_SHOVEL.get(), "Magnifying Glass");
+        add(ModItems.ICECREAM_SHOVEL.get(), "Vanilla Cone");
+
+        // AXES
+        add(ModItems.BOUNDED_AXE.get(), "Bounded Axe");
+        add(ModItems.BOUNDLESS_AXE.get(), "Boundless Axe");
 
         // ENTANGLEMENT
         add(ModItems.LOOSELY_ENTANGLED_ITEM.get(), "Loosely Entangled Mass");

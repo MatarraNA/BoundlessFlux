@@ -75,6 +75,12 @@ public class TutItemModels extends ItemModelProvider {
         singleTexture(ModItems.UPGRADE_SILK.getId().getPath(),
                 mcLoc("item/generated"),
                 "layer0", modLoc("item/upgrades/upgrade_silk"));
+        singleTexture(ModItems.UPGRADE_FALLER.getId().getPath(),
+                mcLoc("item/generated"),
+                "layer0", modLoc("item/upgrades/upgrade_faller"));
+        singleTexture(ModItems.UPGRADE_VEIN_MINER_ORE.getId().getPath(),
+                mcLoc("item/generated"),
+                "layer0", modLoc("item/upgrades/upgrade_vein_miner"));
 
         // PICKAXES
         singleTexture(ModItems.BOUNDED_PICKAXE.getId().getPath(),
@@ -103,6 +109,23 @@ public class TutItemModels extends ItemModelProvider {
         singleTexture(ModItems.BOUNDLESS_SHOVEL.getId().getPath(),
                 mcLoc("item/handheld"),
                 "layer0", modLoc("item/shovel/boundless_shovel"));
+        singleTexture(ModItems.SPATULA_SHOVEL.getId().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/shovel/golden_spatula"));
+        singleTexture(ModItems.MAGNIFYING_SHOVEL.getId().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/shovel/magnifying"));
+        singleTexture(ModItems.ICECREAM_SHOVEL.getId().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/shovel/icecream_cone"));
+
+        // AXES
+        singleTexture(ModItems.BOUNDED_AXE.getId().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/axe/bounded_axe"));
+        singleTexture(ModItems.BOUNDLESS_AXE.getId().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/axe/bounded_axe"));
 
         // weapons
         singleTexture(ModItems.FIRST_SWORD.getId().getPath(),

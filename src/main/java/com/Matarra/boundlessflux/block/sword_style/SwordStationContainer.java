@@ -125,6 +125,7 @@ public class SwordStationContainer extends AbstractContainerMenu
                     if(pMouseX == 0 && slots.get(pMouseX).hasItem() && slots.get(pMouseX).getItem().getTags().filter(x->
                             x.equals(ModTags.BOUNDLESS_SWORD_POST) ||
                             x.equals(ModTags.BOUNDLESS_PICKAXE_POST) ||
+                            x.equals(ModTags.BOUNDLESS_AXE_POST) ||
                             x.equals(ModTags.BOUNDLESS_BOW_POST)).count() > 0)
                     {
                         deserializeWeaponUpgrades();
@@ -208,6 +209,14 @@ public class SwordStationContainer extends AbstractContainerMenu
             else if( item.equals(ModItems.UPGRADE_INFINITY.get()))
                 weaponItem.enchant(Enchantments.INFINITY_ARROWS, 1);
 
+            // AXE ENCHANTS
+            else if( item.equals(ModItems.UPGRADE_FALLER.get()))
+                weaponItem.enchant(ModEnchantments.FALLER.get(), 1);
+
+            // PICKAXE ENCHANTS
+            else if( item.equals(ModItems.UPGRADE_VEIN_MINER_ORE.get()))
+                weaponItem.enchant(ModEnchantments.ORE_VEIN_MINER.get(), 1);
+
             // GENERIC ENCHANTS
             else if( item.equals(ModItems.UPGRADE_ENERGY_GAIN.get()))
                 weaponItem.enchant(ModEnchantments.ENERGY_GAIN.get(), 1);
@@ -277,6 +286,8 @@ public class SwordStationContainer extends AbstractContainerMenu
             if( item.getTags().filter(x->
                     x.equals(ModTags.BOUNDLESS_SWORD_POST) ||
                     x.equals(ModTags.BOUNDLESS_PICKAXE_POST) ||
+                    x.equals(ModTags.BOUNDLESS_SHOVEL_POST) ||
+                    x.equals(ModTags.BOUNDLESS_AXE_POST) ||
                     x.equals(ModTags.BOUNDLESS_BOW_POST)).count() < 1 ) return;
 
             // set the bool tag
@@ -294,6 +305,10 @@ public class SwordStationContainer extends AbstractContainerMenu
             list = ForgeRegistries.ITEMS.tags().getTag(ModTags.BOUNDLESS_BOW_POST).stream().toList();
         if( item.getTags().filter(x->x.equals(ModTags.BOUNDLESS_PICKAXE_POST)).count() > 0 )
             list = ForgeRegistries.ITEMS.tags().getTag(ModTags.BOUNDLESS_PICKAXE_POST).stream().toList();
+        if( item.getTags().filter(x->x.equals(ModTags.BOUNDLESS_SHOVEL_POST)).count() > 0 )
+            list = ForgeRegistries.ITEMS.tags().getTag(ModTags.BOUNDLESS_SHOVEL_POST).stream().toList();
+        if( item.getTags().filter(x->x.equals(ModTags.BOUNDLESS_AXE_POST)).count() > 0 )
+            list = ForgeRegistries.ITEMS.tags().getTag(ModTags.BOUNDLESS_AXE_POST).stream().toList();
 
         if( list == null ) return;
 

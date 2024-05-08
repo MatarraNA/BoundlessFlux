@@ -16,10 +16,14 @@ public class ModTags
     public static final TagKey<Item> BOUNDLESS_PICKAXE_POST = ItemTags.create(new ResourceLocation(BoundlessFlux.MODID, "boundless_pickaxe_post"));
     public static final TagKey<Item> BOUNDED_SHOVEL_PRE = ItemTags.create(new ResourceLocation(BoundlessFlux.MODID, "bounded_shovel_pre"));
     public static final TagKey<Item> BOUNDLESS_SHOVEL_POST = ItemTags.create(new ResourceLocation(BoundlessFlux.MODID, "boundless_shovel_post"));
+    public static final TagKey<Item> BOUNDED_AXE_PRE = ItemTags.create(new ResourceLocation(BoundlessFlux.MODID, "bounded_axe_pre"));
+    public static final TagKey<Item> BOUNDLESS_AXE_POST = ItemTags.create(new ResourceLocation(BoundlessFlux.MODID, "boundless_axe_post"));
     public static final TagKey<Item> BOUNDLESS_UPGRADE_SWORD = ItemTags.create(new ResourceLocation(BoundlessFlux.MODID, "boundless_upgrade"));
     public static final TagKey<Item> BOUNDLESS_UPGRADE_BOW = ItemTags.create(new ResourceLocation(BoundlessFlux.MODID, "boundless_upgrade_bow"));
 
     // ANY UPGRADE FOR TOOLS THAT BREAKS BLOCKS
     public static final TagKey<Item> BOUNDLESS_UPGRADE_BLOCKBREAK_TOOL = ItemTags.create(new ResourceLocation(BoundlessFlux.MODID, "boundless_upgrade_blockbreak_tool"));
+    public static final TagKey<Item> BOUNDLESS_UPGRADE_AXE = ItemTags.create(new ResourceLocation(BoundlessFlux.MODID, "boundless_upgrade_axe"));
+    public static final TagKey<Item> BOUNDLESS_UPGRADE_PICKAXE = ItemTags.create(new ResourceLocation(BoundlessFlux.MODID, "boundless_upgrade_pickaxe"));
 
 }

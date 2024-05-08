@@ -73,6 +73,7 @@ public class SwordStationBE extends BlockEntity {
                             .filter(x -> x.equals(ModTags.BOUNDLESS_SWORD_POST) ||
                                     x.equals(ModTags.BOUNDLESS_BOW_POST) ||
                                     x.equals(ModTags.BOUNDLESS_SHOVEL_POST) ||
+                                    x.equals(ModTags.BOUNDLESS_AXE_POST) ||
                                     x.equals(ModTags.BOUNDLESS_PICKAXE_POST)).count() > 0;
                 else if (slot > 0 && slot < 4) {
                     // is an item in the first slot?
@@ -97,7 +98,8 @@ public class SwordStationBE extends BlockEntity {
                     else if (weaponItem.getTags().filter(x -> x.equals(ModTags.BOUNDLESS_PICKAXE_POST)).count() > 0) {
 
                         // only allow PICKAXE UPGRADES or BLOCK BREAK upgrades here
-                        if (stack.getTags().filter(x -> x.equals(ModTags.BOUNDLESS_UPGRADE_BLOCKBREAK_TOOL)).count() > 0)
+                        if (stack.getTags().filter(x -> x.equals(ModTags.BOUNDLESS_UPGRADE_BLOCKBREAK_TOOL) ||
+                                x.equals(ModTags.BOUNDLESS_UPGRADE_PICKAXE)).count() > 0)
                             return true;
                     }
 
@@ -106,6 +108,15 @@ public class SwordStationBE extends BlockEntity {
 
                         // only allow SHOVEL UPGRADES or BLOCK BREAK upgrades here
                         if (stack.getTags().filter(x -> x.equals(ModTags.BOUNDLESS_UPGRADE_BLOCKBREAK_TOOL)).count() > 0)
+                            return true;
+                    }
+
+                    // IS IT A AXE?
+                    else if (weaponItem.getTags().filter(x -> x.equals(ModTags.BOUNDLESS_AXE_POST)).count() > 0) {
+
+                        // only allow SHOVEL UPGRADES or BLOCK BREAK upgrades here
+                        if (stack.getTags().filter(x -> x.equals(ModTags.BOUNDLESS_UPGRADE_AXE) ||
+                                x.equals(ModTags.BOUNDLESS_UPGRADE_BLOCKBREAK_TOOL)).count() > 0)
                             return true;
                     }
                 }

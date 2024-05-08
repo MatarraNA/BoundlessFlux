@@ -18,6 +18,10 @@ public class ModEnchantments
             () -> new StormCallEnchant(Enchantment.Rarity.RARE, EnchantmentCategory.BREAKABLE, EquipmentSlot.MAINHAND));
     public static RegistryObject<Enchantment> ENERGY_GAIN = ENCHANTMENTS.register("energy_gain",
             () -> new EnergyGainEnchant(Enchantment.Rarity.RARE, EnchantmentCategory.BREAKABLE, EquipmentSlot.MAINHAND));
+    public static RegistryObject<Enchantment> FALLER = ENCHANTMENTS.register("tree_fall",
+            () -> new FallerEnchant(Enchantment.Rarity.RARE, EnchantmentCategory.BREAKABLE, EquipmentSlot.MAINHAND));
+    public static RegistryObject<Enchantment> ORE_VEIN_MINER = ENCHANTMENTS.register("vein_miner_ore",
+            () -> new OreVeinMinerEnchant(Enchantment.Rarity.RARE, EnchantmentCategory.BREAKABLE, EquipmentSlot.MAINHAND));
     public static void register(IEventBus bus)
     {
         ENCHANTMENTS.register(bus);

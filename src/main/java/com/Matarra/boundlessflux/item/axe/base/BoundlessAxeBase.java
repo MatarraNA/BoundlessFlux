@@ -1,4 +1,4 @@
-package com.Matarra.boundlessflux.item.shovel.base;
+package com.Matarra.boundlessflux.item.axe.base;
 
 import com.Matarra.boundlessflux.config.BoundlessCommonConfig;
 import com.Matarra.boundlessflux.enchant.ModEnchantments;
@@ -10,17 +10,18 @@ import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.common.util.LazyOptional;
@@ -28,11 +29,12 @@ import net.minecraftforge.energy.IEnergyStorage;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
+import java.util.LinkedList;
 import java.util.List;
 
-public class BoundlessShovelBase extends ShovelItem
+public class BoundlessAxeBase extends AxeItem
 {
-    public BoundlessShovelBase(Tier pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
+    public BoundlessAxeBase(Tier pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
         super(pTier, pAttackDamageModifier, pAttackSpeedModifier, pProperties);
     }
 
@@ -147,6 +149,61 @@ public class BoundlessShovelBase extends ShovelItem
 
         // award this tool energy and consume energy as well on block break
         TakeAndAwardEnergy(pStack);
+
+        // handle vein miner enhancement
+        if(pStack.getEnchantmentLevel(ModEnchantments.FALLER.get()) > 0 && pState.is(BlockTags.LOGS) )
+        {
+            // is a type log, now vein mine this tree? structure? wooden thing?
+            LinkedList<BlockPos> veinList = new LinkedList<>();
+            veinList.add(pPos);
+
+            int vein_mine_counter = BoundlessCommonConfig.VEIN_MINE_BLOCK_LIMIT.get();
+
+            while(veinList.peekFirst() != null && vein_mine_counter > 0 )
+            {
+                // get the top block in the list
+                BlockPos pop = veinList.pop();
+
+                // get the block for this pos
+                BlockState state = pLevel.getBlockState(pop);
+
+                // if this block is air, then skip
+                if( state.isAir() && pop != pPos ) continue;
+
+                // it is not air, ensure it is same block once more, then mine
+                if(pLevel.getBlockState(pop).is(pState.getBlock()))
+                {
+                    state.getBlock().playerDestroy(pLevel, (Player) pEntityLiving, pop, state, null, pStack );
+                    pLevel.destroyBlock(pop, false);
+                    TakeAndAwardEnergy(pStack);
+                    vein_mine_counter--;
+                }
+
+                // gather all blocks around it that match
+                for( int x = -1; x <= 1; x++ )
+                {
+                    for( int y = -1; y <= 1; y++ )
+                    {
+                        for( int z = -1; z <= 1; z++ )
+                        {
+                            // get the block in this position, while skipping the origin
+                            if( x == 0 && y == 0 && z == 0 ) continue;
+
+                            // get the pos
+                            BlockPos newPos = new BlockPos(x + pop.getX(), y + pop.getY(), z + pop.getZ() );
+
+                            // is it the same block?
+                            BlockState newState = pLevel.getBlockState(newPos);
+                            if( !newState.is(pState.getBlock()) ) continue;
+
+                            // it is the same block, add it to the list
+                            if( !veinList.contains(newPos))
+                                veinList.add(newPos);
+                        }
+                    }
+                }
+            }
+        }
 
         // handle hammer enhancement
         if(pStack.getEnchantmentLevel(ModEnchantments.HAMMER.get()) > 0  && bResult != null)

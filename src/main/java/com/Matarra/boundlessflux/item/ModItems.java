@@ -4,6 +4,8 @@ import com.Matarra.boundlessflux.BoundlessFlux;
 import com.Matarra.boundlessflux.entity.projectile.FirstArrow;
 import com.Matarra.boundlessflux.entity.projectile.ShurikenArrow;
 import com.Matarra.boundlessflux.item.arrow.*;
+import com.Matarra.boundlessflux.item.axe.BoundedAxe;
+import com.Matarra.boundlessflux.item.axe.BoundlessAxe;
 import com.Matarra.boundlessflux.item.bow.*;
 import com.Matarra.boundlessflux.item.bow.base.BoundedBowBase;
 import com.Matarra.boundlessflux.item.misc.BoundlessGem;
@@ -76,11 +78,17 @@ public class ModItems
                 }
             });
 
+    // MISC ITEMS
+    public static final RegistryObject<BoundlessGem> BOUNDLESS_GEM = ITEMS.register("boundless_gem", () ->
+            new BoundlessGem(ITEM_PROPERTIES_NOSTACK));
+
     // BOUNDED TOOLS
     public static final RegistryObject<BoundedPickaxe> BOUNDED_PICKAXE = ITEMS.register("bounded_pickaxe",
             () -> new BoundedPickaxe(CustomTiers.BOUNDED_TIER, 4, -2f, ITEM_PROPERTIES));
     public static final RegistryObject<BoundedShovel> BOUNDED_SHOVEL = ITEMS.register("bounded_shovel",
             () -> new BoundedShovel(CustomTiers.BOUNDED_TIER, 4, -2f, ITEM_PROPERTIES));
+    public static final RegistryObject<BoundedAxe> BOUNDED_AXE = ITEMS.register("bounded_axe",
+            () -> new BoundedAxe(CustomTiers.BOUNDED_TIER, 4, -2f, ITEM_PROPERTIES));
 
     // BOUNDLESS PICKAXES
     public static final RegistryObject<BoundlessPickaxe> BOUNDLESS_PICKAXE = ITEMS.register("boundless_pickaxe",
@@ -97,6 +105,16 @@ public class ModItems
     // SHOVELS
     public static final RegistryObject<BoundlessShovel> BOUNDLESS_SHOVEL = ITEMS.register("boundless_shovel",
             () -> new BoundlessShovel(CustomTiers.BOUNDLESS_TIER, 4, -2f, ITEM_PROPERTIES));
+    public static final RegistryObject<SpatulaShovel> SPATULA_SHOVEL = ITEMS.register("spatula_shovel",
+            () -> new SpatulaShovel(CustomTiers.BOUNDLESS_TIER, 4, -2f, ITEM_PROPERTIES));
+    public static final RegistryObject<MagnifyingShovel> MAGNIFYING_SHOVEL = ITEMS.register("magnifying_shovel",
+            () -> new MagnifyingShovel(CustomTiers.BOUNDLESS_TIER, 4, -2f, ITEM_PROPERTIES));
+    public static final RegistryObject<IceCreamShovel> ICECREAM_SHOVEL = ITEMS.register("icecream_shovel",
+            () -> new IceCreamShovel(CustomTiers.BOUNDLESS_TIER, 4, -2f, ITEM_PROPERTIES));
+
+    // AXES
+    public static final RegistryObject<BoundlessAxe> BOUNDLESS_AXE = ITEMS.register("boundless_axe",
+            () -> new BoundlessAxe(CustomTiers.BOUNDED_TIER, 4, -2f, ITEM_PROPERTIES));
 
     // ARROWS
     public static final RegistryObject<FirstArrowItem> FIRST_ARROW = ITEMS.register("first_arrow",
@@ -124,9 +142,25 @@ public class ModItems
     public static final RegistryObject<RaygunBoundless> RAYGUN_BOUNDLESS = ITEMS.register("raygun_boundless",
             () -> new RaygunBoundless(ITEM_PROPERTIES));
 
-    // MISC ITEMS
-    public static final RegistryObject<BoundlessGem> BOUNDLESS_GEM = ITEMS.register("boundless_gem", () ->
-            new BoundlessGem(ITEM_PROPERTIES_NOSTACK));
+    // BOUNDED SWORDS
+    public static final RegistryObject<FirstBounded> FIRST_SWORD = ITEMS.register("first_sword", () ->
+            new FirstBounded(CustomTiers.BOUNDED_TIER, 9, -2f, ITEM_PROPERTIES));
+
+    // BOUNDLESS SWORDS
+    public static final RegistryObject<FirstBoundless> FIRST_BOUNDLESS = ITEMS.register("first_sword_boundless", () ->
+            new FirstBoundless(CustomTiers.BOUNDLESS_TIER, 9, -2f, ITEM_PROPERTIES));
+    public static final RegistryObject<RunicBoundless> RUNIC_BOUNDLESS = ITEMS.register("runic_boundless", () ->
+            new RunicBoundless(CustomTiers.BOUNDLESS_TIER, 9, -2f, ITEM_PROPERTIES));
+    public static final RegistryObject<KeybladeBoundless> KEYBLADE_BOUNDLESS = ITEMS.register("keyblade_boundless", () ->
+            new KeybladeBoundless(CustomTiers.BOUNDLESS_TIER, 9, -2f, ITEM_PROPERTIES));
+    public static final RegistryObject<GenjiBoundless> GENJI_BOUNDLESS = ITEMS.register("genji_boundless", () ->
+            new GenjiBoundless(CustomTiers.BOUNDLESS_TIER, 9, -2f, ITEM_PROPERTIES));
+    public static final RegistryObject<MasamuneBoundless> MASAMUNE_BOUNDLESS = ITEMS.register("masamune_boundless", () ->
+            new MasamuneBoundless(CustomTiers.BOUNDLESS_TIER, 9, -2f, ITEM_PROPERTIES));
+    public static final RegistryObject<CandyCaneBoundless> CANDYCANE_BOUNDLESS = ITEMS.register("candycane_boundless", () ->
+            new CandyCaneBoundless(CustomTiers.BOUNDLESS_TIER, 9, -2f, ITEM_PROPERTIES));
+    public static final RegistryObject<TitanBoundless> TITAN_BOUNDLESS = ITEMS.register("titan_blade", () ->
+            new TitanBoundless(CustomTiers.BOUNDLESS_TIER, 9, -2f, ITEM_PROPERTIES));
 
     // UPGRADES
     public static final RegistryObject<ItemLootingUpgrade> UPGRADE_LOOTING = ITEMS.register("upgrade_looting", () ->
@@ -149,32 +183,10 @@ public class ModItems
             new ItemHammerUpgrade(ITEM_PROPERTIES_NOSTACK));
     public static final RegistryObject<ItemEnergyGainUpgrade> UPGRADE_ENERGY_GAIN = ITEMS.register("upgrade_energy_gain", () ->
             new ItemEnergyGainUpgrade(ITEM_PROPERTIES_NOSTACK));
-
-    // BOUNDED SWORDS
-    public static final RegistryObject<FirstBounded> FIRST_SWORD = ITEMS.register("first_sword", () ->
-            new FirstBounded(CustomTiers.BOUNDED_TIER, 9, -2f, ITEM_PROPERTIES));
-
-    // BOUNDLESS SWORDS
-    public static final RegistryObject<RunicBoundless> RUNIC_BOUNDLESS = ITEMS.register("runic_boundless", () ->
-            new RunicBoundless(CustomTiers.BOUNDLESS_TIER, 9, -2f, ITEM_PROPERTIES));
-    public static final RegistryObject<KeybladeBoundless> KEYBLADE_BOUNDLESS = ITEMS.register("keyblade_boundless", () ->
-            new KeybladeBoundless(CustomTiers.BOUNDLESS_TIER, 9, -2f, ITEM_PROPERTIES));
-
-    public static final RegistryObject<GenjiBoundless> GENJI_BOUNDLESS = ITEMS.register("genji_boundless", () ->
-            new GenjiBoundless(CustomTiers.BOUNDLESS_TIER, 9, -2f, ITEM_PROPERTIES));
-
-    public static final RegistryObject<MasamuneBoundless> MASAMUNE_BOUNDLESS = ITEMS.register("masamune_boundless", () ->
-            new MasamuneBoundless(CustomTiers.BOUNDLESS_TIER, 9, -2f, ITEM_PROPERTIES));
-
-    public static final RegistryObject<CandyCaneBoundless> CANDYCANE_BOUNDLESS = ITEMS.register("candycane_boundless", () ->
-            new CandyCaneBoundless(CustomTiers.BOUNDLESS_TIER, 9, -2f, ITEM_PROPERTIES));
-
-    public static final RegistryObject<TitanBoundless> TITAN_BOUNDLESS = ITEMS.register("titan_blade", () ->
-            new TitanBoundless(CustomTiers.BOUNDLESS_TIER, 9, -2f, ITEM_PROPERTIES));
-
-
-    public static final RegistryObject<FirstBoundless> FIRST_BOUNDLESS = ITEMS.register("first_sword_boundless", () ->
-            new FirstBoundless(CustomTiers.BOUNDLESS_TIER, 9, -2f, ITEM_PROPERTIES));
+    public static final RegistryObject<ItemFallerUpgrade> UPGRADE_FALLER = ITEMS.register("upgrade_faller", () ->
+            new ItemFallerUpgrade(ITEM_PROPERTIES_NOSTACK));
+    public static final RegistryObject<ItemOreVeinUpgrade> UPGRADE_VEIN_MINER_ORE = ITEMS.register("upgrade_vein_miner_ores", () ->
+            new ItemOreVeinUpgrade(ITEM_PROPERTIES_NOSTACK));
 
     public static class CustomTiers
     {

@@ -98,7 +98,7 @@ public class SwordStationScreen extends AbstractContainerScreen<SwordStationCont
         else
         {
             // add in our labels!
-            drawCenteredString(matrixStack, Minecraft.getInstance().font, "Insert a Boundless Weapon", relX + this.imageWidth/2 - 69/2, relY + 6, 0xFFAA00);
+            drawCenteredString(matrixStack, Minecraft.getInstance().font, "Insert Boundless Weapon / Tool", relX + this.imageWidth/2 - 69/2, relY + 6, 0xFFAA00);
 
             // it has no items so disable our buttons!
             if( buttonNext != null && buttonPrevious != null && gainOnKillCheckbox != null )
@@ -181,7 +181,7 @@ public class SwordStationScreen extends AbstractContainerScreen<SwordStationCont
 
         // create our checkbox
         gainOnKillCheckbox = addRenderableWidget(new Checkbox(relX + 181, relY + 37, 56, 20,
-                Component.literal("+On Kill"), false)
+                Component.literal("Gain FE"), false)
         {
             @Override
             public void onPress() {
