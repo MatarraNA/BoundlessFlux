@@ -22,6 +22,8 @@ public class ModEnchantments
             () -> new FallerEnchant(Enchantment.Rarity.RARE, EnchantmentCategory.BREAKABLE, EquipmentSlot.MAINHAND));
     public static RegistryObject<Enchantment> ORE_VEIN_MINER = ENCHANTMENTS.register("vein_miner_ore",
             () -> new OreVeinMinerEnchant(Enchantment.Rarity.RARE, EnchantmentCategory.BREAKABLE, EquipmentSlot.MAINHAND));
+    public static RegistryObject<Enchantment> FIREWORK = ENCHANTMENTS.register("firework",
+            () -> new FireworkEnchant(Enchantment.Rarity.RARE, EnchantmentCategory.BREAKABLE, EquipmentSlot.MAINHAND));
     public static void register(IEventBus bus)
     {
         ENCHANTMENTS.register(bus);

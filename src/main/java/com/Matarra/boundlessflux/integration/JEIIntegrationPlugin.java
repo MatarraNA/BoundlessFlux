@@ -103,6 +103,13 @@ public class JEIIntegrationPlugin implements IModPlugin
                             "Weapon Entity Entangler Bench along with a compatible boundless " +
                             "axe."));
         });
+        ForgeRegistries.ITEMS.tags().getTag(ModTags.BOUNDLESS_UPGRADE_PICKAXE).stream().forEach(x->
+        {
+            registration.addIngredientInfo(new ItemStack(x), VanillaTypes.ITEM_STACK,
+                    Component.literal("To use this pickaxe upgrade, insert it into the " +
+                            "Weapon Entity Entangler Bench along with a compatible boundless " +
+                            "pickaxe."));
+        });
         ForgeRegistries.ITEMS.tags().getTag(ModTags.BOUNDLESS_UPGRADE_BLOCKBREAK_TOOL).stream().forEach(x->
         {
             registration.addIngredientInfo(new ItemStack(x), VanillaTypes.ITEM_STACK,

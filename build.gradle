@@ -7,7 +7,7 @@ plugins {
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 
-version = '1.1'
+version = '2.0'
 group = 'com.matarra.boundlessflux' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'boundlessflux'
 
@@ -159,7 +159,7 @@ jar {
         attributes([
                 "Specification-Title"     : "boundlessflux",
                 "Specification-Vendor"    : "boundlessflux",
-                "Specification-Version"   : "1", // We are version 1 of ourselves
+                "Specification-Version"   : "1",
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "boundlessflux",

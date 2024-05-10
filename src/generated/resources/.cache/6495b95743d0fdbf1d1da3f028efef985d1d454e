@@ -1,4 +1,4 @@
-// 1.19.2	2024-05-07T21:01:00.8389493	Item Models: boundlessflux
+// 1.19.2	2024-05-08T21:09:53.5914022	Item Models: boundlessflux
 8eafd20093a7bb6834613634e63c4c7426ccbf42 assets/boundlessflux/models/item/awakened_entangled_matter.json
 080cdff9967302e3ef4f287d039e3627d9cfb879 assets/boundlessflux/models/item/bounded_axe.json
 068664149d4b69e076982134acb5936e0b22aed3 assets/boundlessflux/models/item/bounded_pickaxe.json
@@ -13,6 +13,7 @@ c63cbcadc96096d838049a1da46d7ffacf8e3e0a assets/boundlessflux/models/item/boundl
 eff9737c00cc7ff0ab38cdd716149dd7d7fd19ab assets/boundlessflux/models/item/first_sword.json
 eff9737c00cc7ff0ab38cdd716149dd7d7fd19ab assets/boundlessflux/models/item/first_sword_boundless.json
 258bcc47aa88b25913263c9bb9affbd31b41e231 assets/boundlessflux/models/item/genji_boundless.json
+90721469d4bdc9809d921ca42ca88a0920be1a19 assets/boundlessflux/models/item/gravity_hammer_axe.json
 3187c22671fb66b92c5c22b01cbc1bc84fc2a866 assets/boundlessflux/models/item/greater_entangled_matter.json
 bed51e4a1c6053d7d3f7b8c30f44935bb43b3d76 assets/boundlessflux/models/item/icecream_shovel.json
 d7118e001ed60b96d86fd3998b3778e2bb6bb5ba assets/boundlessflux/models/item/jellyfish_pickaxe.json
@@ -26,11 +27,13 @@ d45bcbb6c558685e22eebc4a075ebb68f36e2c29 assets/boundlessflux/models/item/magnif
 c58721b2be243dc277034cbb90163d19a6c87217 assets/boundlessflux/models/item/runic_boundless.json
 4900e3bfe81986e4ba230e7dd812759b30d16888 assets/boundlessflux/models/item/scythe_pickaxe.json
 03254c99216e94e781b27eacf49f63890e0207f3 assets/boundlessflux/models/item/spatula_shovel.json
+a34b2d4a5cd093224cc261c7167f131ba5f114d5 assets/boundlessflux/models/item/stop_sign_axe.json
 766d2e0778da4d335b042ba08b180755da31ae33 assets/boundlessflux/models/item/sword_station.json
 33b2f060f49e92cb942ede37584c40e3c844e52e assets/boundlessflux/models/item/titan_blade.json
 c3e69bdccb541e2d4329beb2bb8a78dc98a2e104 assets/boundlessflux/models/item/upgrade_energy_gain.json
 a941d7745b76e2ac55fc1d92685da82f83ea0d04 assets/boundlessflux/models/item/upgrade_faller.json
 2a331054f6f73ac820530a7d294aa98b60e5b4c5 assets/boundlessflux/models/item/upgrade_fire.json
+40514f3b8393ddd2a7a4666a2ea896385d8816bc assets/boundlessflux/models/item/upgrade_firework.json
 0922c043406cc8a369964ca0675af57e56fed3c0 assets/boundlessflux/models/item/upgrade_flame.json
 10917801ab4bff24c91726bb3ff5a89d6f57f221 assets/boundlessflux/models/item/upgrade_fortune.json
 893c3073110dc3047df856d22c81729ebdcfa3be assets/boundlessflux/models/item/upgrade_hammer.json

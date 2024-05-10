@@ -257,6 +257,26 @@ public class TutRecipes extends RecipeProvider {
                 .group(BoundlessFlux.MODID)
                 .unlockedBy("coal", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COAL))
                 .save(consumer);
+        ShapedRecipeBuilder.shaped(ModItems.UPGRADE_VEIN_MINER_ORE.get())
+                .pattern("ini")
+                .pattern("nsn")
+                .pattern("ini")
+                .define('n', Tags.Items.NUGGETS_IRON)
+                .define('i', Tags.Items.INGOTS_IRON)
+                .define('s', ItemTags.DIAMOND_ORES)
+                .group(BoundlessFlux.MODID)
+                .unlockedBy("coal", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COAL))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(ModItems.UPGRADE_FIREWORK.get())
+                .pattern("ini")
+                .pattern("nsn")
+                .pattern("ini")
+                .define('n', Tags.Items.NUGGETS_IRON)
+                .define('i', Tags.Items.INGOTS_IRON)
+                .define('s', Items.FIREWORK_ROCKET)
+                .group(BoundlessFlux.MODID)
+                .unlockedBy("coal", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COAL))
+                .save(consumer);
 
         // BLOCKS
         ShapedRecipeBuilder.shaped(ModBlocks.SWORD_STATION_ITEM.get())

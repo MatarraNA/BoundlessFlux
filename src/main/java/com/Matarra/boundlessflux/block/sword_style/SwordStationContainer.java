@@ -200,6 +200,8 @@ public class SwordStationContainer extends AbstractContainerMenu
                 weaponItem.enchant(Enchantments.SWEEPING_EDGE, 6);
             else if( item.equals(ModItems.UPGRADE_FIRE.get()))
                 weaponItem.enchant(Enchantments.FIRE_ASPECT, 4);
+            else if( item.equals(ModItems.UPGRADE_FIREWORK.get()))
+                weaponItem.enchant(ModEnchantments.FIREWORK.get(), 1);
 
             // BOW ENCHANTS
             else if( item.equals(ModItems.UPGRADE_STORM_CALL.get()))

@@ -1,6 +1,8 @@
 {
   "values": [
     "boundlessflux:boundless_axe",
+    "boundlessflux:gravity_hammer_axe",
+    "boundlessflux:stop_sign_axe",
     "boundlessflux:bounded_axe"
   ]
 }

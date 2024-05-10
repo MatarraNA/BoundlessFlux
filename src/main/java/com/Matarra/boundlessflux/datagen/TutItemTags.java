@@ -94,24 +94,30 @@ public class TutItemTags extends ItemTagsProvider {
 
         tag(Tags.Items.TOOLS_AXES)
                 .add(ModItems.BOUNDLESS_AXE.get())
+                .add(ModItems.GRAVITY_HAMMER_AXE.get())
+                .add(ModItems.STOP_SIGN_AXE.get())
                 .add(ModItems.BOUNDED_AXE.get());
 
         tag(ModTags.BOUNDED_AXE_PRE)
                 .add(ModItems.BOUNDED_AXE.get());
 
         tag(ModTags.BOUNDLESS_AXE_POST)
+                .add(ModItems.GRAVITY_HAMMER_AXE.get())
+                .add(ModItems.STOP_SIGN_AXE.get())
                 .add(ModItems.BOUNDLESS_AXE.get());
 
         tag(ModTags.BOUNDLESS_UPGRADE_SWORD)
                 .add(ModItems.UPGRADE_SWEEPING.get())
                 .add(ModItems.UPGRADE_FIRE.get())
                 .add(ModItems.UPGRADE_ENERGY_GAIN.get())
+                .add(ModItems.UPGRADE_FIREWORK.get())
                 .add(ModItems.UPGRADE_LOOTING.get());
 
         tag(ModTags.BOUNDLESS_UPGRADE_BOW)
                 .add(ModItems.UPGRADE_FLAME.get())
                 .add(ModItems.UPGRADE_INFINITY.get())
                 .add(ModItems.UPGRADE_ENERGY_GAIN.get())
+                .add(ModItems.UPGRADE_FIREWORK.get())
                 .add(ModItems.UPGRADE_STORM_CALL.get());
 
         tag(ModTags.BOUNDLESS_UPGRADE_PICKAXE)

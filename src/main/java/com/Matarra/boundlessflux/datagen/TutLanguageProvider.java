@@ -46,11 +46,13 @@ public class TutLanguageProvider extends LanguageProvider {
         add(ModEnchantments.ENERGY_GAIN.get(), "Energy Gain");
         add(ModEnchantments.FALLER.get(), "Tree Faller");
         add(ModEnchantments.ORE_VEIN_MINER.get(), "Ore-Miner");
+        add(ModEnchantments.FIREWORK.get(), "Firework");
         add(ModItems.UPGRADE_STORM_CALL.get(), "Storm Call Enhancement");
         add(ModItems.UPGRADE_FLAME.get(), "Flame Enhancement");
         add(ModItems.UPGRADE_INFINITY.get(), "Infinity Enhancement");
         add(ModItems.UPGRADE_FALLER.get(), "Tree Faller Enhancement");
         add(ModItems.UPGRADE_VEIN_MINER_ORE.get(), "VeinMiner Enhancement");
+        add(ModItems.UPGRADE_FIREWORK.get(), "Firework Enhancement");
 
         // PICKS
         add(ModItems.BOUNDED_PICKAXE.get(), "Bounded Pickaxe");
@@ -70,6 +72,8 @@ public class TutLanguageProvider extends LanguageProvider {
         // AXES
         add(ModItems.BOUNDED_AXE.get(), "Bounded Axe");
         add(ModItems.BOUNDLESS_AXE.get(), "Boundless Axe");
+        add(ModItems.GRAVITY_HAMMER_AXE.get(), "Gravity Hammer");
+        add(ModItems.STOP_SIGN_AXE.get(), "Stop Sign");
 
         // ENTANGLEMENT
         add(ModItems.LOOSELY_ENTANGLED_ITEM.get(), "Loosely Entangled Mass");

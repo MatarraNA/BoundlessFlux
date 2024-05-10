@@ -6,6 +6,8 @@ import com.Matarra.boundlessflux.entity.projectile.ShurikenArrow;
 import com.Matarra.boundlessflux.item.arrow.*;
 import com.Matarra.boundlessflux.item.axe.BoundedAxe;
 import com.Matarra.boundlessflux.item.axe.BoundlessAxe;
+import com.Matarra.boundlessflux.item.axe.GravityHammerAxe;
+import com.Matarra.boundlessflux.item.axe.StopSignAxe;
 import com.Matarra.boundlessflux.item.bow.*;
 import com.Matarra.boundlessflux.item.bow.base.BoundedBowBase;
 import com.Matarra.boundlessflux.item.misc.BoundlessGem;
@@ -115,6 +117,10 @@ public class ModItems
     // AXES
     public static final RegistryObject<BoundlessAxe> BOUNDLESS_AXE = ITEMS.register("boundless_axe",
             () -> new BoundlessAxe(CustomTiers.BOUNDED_TIER, 4, -2f, ITEM_PROPERTIES));
+    public static final RegistryObject<GravityHammerAxe> GRAVITY_HAMMER_AXE = ITEMS.register("gravity_hammer_axe",
+            () -> new GravityHammerAxe(CustomTiers.BOUNDED_TIER, 4, -2f, ITEM_PROPERTIES));
+    public static final RegistryObject<StopSignAxe> STOP_SIGN_AXE = ITEMS.register("stop_sign_axe",
+            () -> new StopSignAxe(CustomTiers.BOUNDED_TIER, 4, -2f, ITEM_PROPERTIES));
 
     // ARROWS
     public static final RegistryObject<FirstArrowItem> FIRST_ARROW = ITEMS.register("first_arrow",
@@ -187,6 +193,8 @@ public class ModItems
             new ItemFallerUpgrade(ITEM_PROPERTIES_NOSTACK));
     public static final RegistryObject<ItemOreVeinUpgrade> UPGRADE_VEIN_MINER_ORE = ITEMS.register("upgrade_vein_miner_ores", () ->
             new ItemOreVeinUpgrade(ITEM_PROPERTIES_NOSTACK));
+    public static final RegistryObject<ItemFireworkUpgrade> UPGRADE_FIREWORK = ITEMS.register("upgrade_firework", () ->
+            new ItemFireworkUpgrade(ITEM_PROPERTIES_NOSTACK));
 
     public static class CustomTiers
     {

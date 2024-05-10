@@ -182,7 +182,7 @@ public class BoundlessPickaxeBase extends PickaxeItem
                 // it is not air, ensure it is same block once more, then mine
                 if(pLevel.getBlockState(pop).is(pState.getBlock()))
                 {
-                    state.getBlock().playerDestroy(pLevel, (Player) pEntityLiving, pop, state, null, pStack );
+                    state.getBlock().playerDestroy(pLevel, (Player) pEntityLiving, pPos, state, null, pStack );
                     pLevel.destroyBlock(pop, false);
                     TakeAndAwardEnergy(pStack);
                     vein_mine_counter--;

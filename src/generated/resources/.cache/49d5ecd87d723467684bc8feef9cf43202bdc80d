@@ -1,21 +1,2 @@
-// 1.19.2	2024-05-07T21:01:00.8399468	Tutorial Tags
-eb5ff0886c0e6ba4437d2224358c48761aba438d data/boundlessflux/tags/items/bounded_axe_pre.json
-fcfa00acc3c7d2a3eb48c8bc445a88c62f301a37 data/boundlessflux/tags/items/bounded_bow_pre.json
-926b2c9e8821ff0a15aa50ebbe418310cd65e505 data/boundlessflux/tags/items/bounded_pickaxe_pre.json
-342aa6c65fb6d397dfef6dd4af97943601ce1d15 data/boundlessflux/tags/items/bounded_shovel_pre.json
-71aaf61e740fa36d05991c417787fcc9801c2111 data/boundlessflux/tags/items/bounded_sword_pre.json
-5046ca172a4a488611c8390f9e65ec3abc2e5e3a data/boundlessflux/tags/items/boundless_axe_post.json
-9494b4a7e2b0c7899be81bd2b844eb9ada5021ef data/boundlessflux/tags/items/boundless_bow_post.json
-a2f4a223cbb9352a919f5f3eead74583bd333dd3 data/boundlessflux/tags/items/boundless_pickaxe_post.json
-e070e6518758d7d5f57b89fc35b1dfdab7a3ea46 data/boundlessflux/tags/items/boundless_shovel_post.json
-d0ef0ff14fbfb73614bfa95bbb349eccccdac865 data/boundlessflux/tags/items/boundless_sword_post.json
-3dcf5678fb84308cf82f69cce94940a4ee8241ca data/boundlessflux/tags/items/boundless_upgrade.json
-c7e7aba9df7922742e3ae32adb4c2d59ce5cb26f data/boundlessflux/tags/items/boundless_upgrade_axe.json
-9ace43d8f5c4de0804c5615719afa13570475259 data/boundlessflux/tags/items/boundless_upgrade_blockbreak_tool.json
-8722ad7ae9ccef1aab26f7c1b7a8df2069949f53 data/boundlessflux/tags/items/boundless_upgrade_bow.json
-7223442c9917626435a21931b95f41ed26334f75 data/boundlessflux/tags/items/boundless_upgrade_pickaxe.json
-0cd33c820bf6aa382169e0b6c56c2375dfcbc340 data/forge/tags/items/tools/axes.json
-31acd3d5033693b12edf64cce626457b0da756c4 data/forge/tags/items/tools/bows.json
-77e0685deacaaa27139b7147936e1e8e5f60ddae data/forge/tags/items/tools/pickaxes.json
-7da7d55b87980a5d588c66a0e5ca1e4540e73c98 data/forge/tags/items/tools/shovels.json
-1f0c8913aa75e72d36648bf61f7b21264e40e5c4 data/forge/tags/items/tools/swords.json
+// 1.19.2	2024-05-08T21:37:08.2471766	Tutorial Tags
+ee77c94c8018814376d1392df7dec1227d2e9177 data/minecraft/tags/blocks/mineable/pickaxe.json

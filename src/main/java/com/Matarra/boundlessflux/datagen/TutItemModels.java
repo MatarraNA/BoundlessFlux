@@ -81,6 +81,9 @@ public class TutItemModels extends ItemModelProvider {
         singleTexture(ModItems.UPGRADE_VEIN_MINER_ORE.getId().getPath(),
                 mcLoc("item/generated"),
                 "layer0", modLoc("item/upgrades/upgrade_vein_miner"));
+        singleTexture(ModItems.UPGRADE_FIREWORK.getId().getPath(),
+                mcLoc("item/generated"),
+                "layer0", modLoc("item/upgrades/upgrade_firework"));
 
         // PICKAXES
         singleTexture(ModItems.BOUNDED_PICKAXE.getId().getPath(),
@@ -126,6 +129,12 @@ public class TutItemModels extends ItemModelProvider {
         singleTexture(ModItems.BOUNDLESS_AXE.getId().getPath(),
                 mcLoc("item/handheld"),
                 "layer0", modLoc("item/axe/bounded_axe"));
+        singleTexture(ModItems.GRAVITY_HAMMER_AXE.getId().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/axe/gravity_hammer"));
+        singleTexture(ModItems.STOP_SIGN_AXE.getId().getPath(),
+                mcLoc("item/handheld"),
+                "layer0", modLoc("item/axe/stop_sign"));
 
         // weapons
         singleTexture(ModItems.FIRST_SWORD.getId().getPath(),
